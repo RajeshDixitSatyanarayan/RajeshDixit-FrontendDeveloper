@@ -1,0 +1,70 @@
+.filter-field {  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  select, input[type="date"] {
+    padding: 8px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    border: 1px solid #c9d3dd;
+    margin-bottom: 8px;
+  }
+
+  select {
+    width: calc(25 * 8px);
+  }
+  input[type="date"] {
+    width: calc(23 * 8px);
+  }
+
+  span {
+    margin-right: 8px;
+    width: 20%;
+  }
+}
+
+.filter-action-panel {
+  padding: auto;
+  text-align: center;
+
+  button {
+    margin-right: calc(2 * 8px);
+  }
+}
+.search-result {
+  .section-body {
+    height: calc(30 * 8px);
+    overflow-x: auto;
+
+    .col {
+      margin-top: 0;
+    }
+  }
+  table {
+    border-collapse:collapse;
+    width: 100%;
+
+    .no-data-found {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      margin-top: calc(10 * 8px);
+      font-size: 1.4em;
+    }
+  }
+  tr {
+    height: 4 * 8px;
+    border-bottom: 1px solid #c9d3dd;
+  }
+  thead th {
+    background-color: #333;
+    color: #c9d3dd;
+    padding: 8px;
+  }
+  td {
+    text-align: left;
+    padding-left: 8px;
+  }
+}

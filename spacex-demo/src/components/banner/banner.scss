@@ -1,0 +1,20 @@
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  padding: calc(2 * 8px);
+  border-bottom: 1px solid #c9d3dd;
+  height: calc(40 * 8px);
+  
+  .col {
+    margin: auto;
+    width: 100%;
+    margin-right: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-container {
+    flex-direction: column;
+  }
+}

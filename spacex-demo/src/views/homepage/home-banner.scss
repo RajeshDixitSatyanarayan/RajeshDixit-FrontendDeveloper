@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+  .home-banner {
+    &.banner-container {
+      flex-direction: column-reverse;
+    }
+  }
+}
