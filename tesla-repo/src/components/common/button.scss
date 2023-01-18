@@ -1,0 +1,17 @@
+.round-button {
+  min-width: calc(15 * 8px);
+  border-radius: calc(5 * 8px);
+  padding: calc(2 * 8px);
+
+  &.primary {
+    background-color: #29323d;
+    color: #fff;
+    border: 1px solid #29323d;
+  }
+
+  &.secondary {
+    color: #c9d3dd;
+    background-color: #fff;
+    border: 1px solid #c9d3dd;
+  }
+}
