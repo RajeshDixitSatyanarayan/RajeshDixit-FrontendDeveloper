@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import './button.scss';
+import styles from  './button.module.scss';
 
 export interface IButtonProps {
   label: string;
@@ -8,7 +8,7 @@ export interface IButtonProps {
   roundBorder?: boolean;
 }
 const Button = ({label, className, onClick, roundBorder = false}: IButtonProps) => {
-  const _class = roundBorder ? 'round-button' : 'rectangle-button'
+  const _class = roundBorder ? styles.roundButton : styles.rectangleButton
   return (
     <>
       <button className={`${_class} ${className}`} onClick={onClick}>{label}</button>
@@ -17,9 +17,9 @@ const Button = ({label, className, onClick, roundBorder = false}: IButtonProps) 
 }
 
 export const PrimaryButton = (props: IButtonProps) => {
-  return <Button {...props} className={`primary ${props.className}`} />
+  return <Button {...props} className={`${styles.primary} ${props.className || ''}`} />
 }
 
 export const SecondaryButton = (props: IButtonProps) => {
-  return <Button {...props} className={`secondary ${props.className}`} />
+  return <Button {...props} className={`${styles.secondary} ${props.className || ''}`} />
 }

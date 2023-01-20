@@ -1,5 +1,5 @@
 import { Columns, IColumnsProps } from "../common/columns";
-import './section.scss';
+import styles from './section.module.scss';
 export interface ISectionProps extends IColumnsProps {
   title: string;
   footer?: JSX.Element;
@@ -7,12 +7,14 @@ export interface ISectionProps extends IColumnsProps {
 }
 export const Section = ({title, columns, footer, classname = ''}: ISectionProps) => {
   return (
-    <div className={`section-container ${classname}`}>
+    <div className={`${styles.sectionContainer} ${classname}`}>
       <h2>{title}</h2>
-      <div className="section-body">
+      <div className={styles.sectionBody}>
         <Columns columns={columns} />
       </div>
-      <div className="section-footer">{footer}</div>
+      {
+        !!footer && <div className={styles.sectionFooter}>{footer}</div> 
+      }
     </div>
   )
 }

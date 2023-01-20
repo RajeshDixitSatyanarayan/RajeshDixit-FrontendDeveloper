@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+@import "../../color.scss";
+
+.roundButton {
+  min-width: calc(15 * $base_unit);
+  border-radius: calc(5 * $base_unit);
+  padding: calc(2 * $base_unit);
+  font-weight: 800;
+
+  &.primary {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+
+  &.secondary {
+    color: $gray;
+    background-color: $white;
+    border: 1px solid $border-gray;
+  }
+}

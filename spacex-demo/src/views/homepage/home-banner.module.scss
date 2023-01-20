@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.homeBanner {
+  div[class^="section_col"] {
+    margin: auto;
+    width: 100%;
+    margin-right: $base_unit;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .homeBanner {
+    flex-direction: column-reverse;
+    div[class^="section_col"] {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

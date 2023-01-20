@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+@import "../../color.scss";
+
+.select select {
+  padding: $base_unit;
+  border-radius: $base_unit;
+  text-transform: capitalize;
+
+  option.placeholder {
+    color: $gray;
+  }
+}

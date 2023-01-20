@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+@import "../../color.scss";
+
+.sectionContainer {
+  max-height: calc(40 * $base_unit);
+  border-bottom: 1px solid $border-gray;
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sectionBody {
+    display: flex;
+    flex-direction: row;
+    padding: calc(2 * $base_unit);
+    max-height: calc(35 * $base_unit);
+
+    .col {
+      margin: auto;
+      width: 100%;
+      margin-right: $base_unit;
+      text-align: center;
+    }
+  }
+  .sectionFooter {
+    margin-top: calc(2 * $base_unit);
+    height: calc(10 * $base_unit);
+    bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionContainer {
+    .sectionBody {
+      flex-direction: column;
+    }
+  }
+}

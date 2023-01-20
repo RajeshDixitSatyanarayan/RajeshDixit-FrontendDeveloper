@@ -1,0 +1,7 @@
+@import "../../variables.scss";
+@import "../../color.scss";
+
+.bannerInfo {
+  text-align: left;
+  padding: calc(2 * $base_unit);
+}

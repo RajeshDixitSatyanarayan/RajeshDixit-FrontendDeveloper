@@ -1,0 +1,6 @@
+@import "./variables.scss";
+@import "./defaults.module.scss";
+
+.App {
+  margin-bottom: calc(5 * $base_unit);
+}

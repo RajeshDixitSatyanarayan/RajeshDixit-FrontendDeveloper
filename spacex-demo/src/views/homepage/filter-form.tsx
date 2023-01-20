@@ -4,7 +4,7 @@ import { PrimaryButton, SecondaryButton } from "../../components/common/button"
 import { Select, TSelectItem } from "../../components/common/select"
 import { Section } from "../../components/section/section"
 import { capsuleType, capsuleStatus } from "../../constants/capsule"
-import './filter-form.scss'
+import styles from './filter-form.module.scss'
 import { FilterResult } from "./filter-result"
 
 const createSelect = (
@@ -14,7 +14,7 @@ const createSelect = (
   value: string
 ) => {
   return (
-    <div className="filter-field">
+    <div className={styles.filterField}>
       <span>{label}: </span>
       <Select
         dataSet={dataSet}
@@ -41,7 +41,7 @@ export const FilterForm = () => {
   }
 
   const launchDate = (
-    <div className="filter-field">
+    <div className={styles.filterField}>
       <span>Launch Date: </span>
       <input type="date" value={originalLaunch} onChange={({target}) => setDate(target.value)}/>
     </div>
@@ -62,7 +62,7 @@ export const FilterForm = () => {
     setOriginalLaunch('')
   }
   const footer = (
-    <div className="filter-action-panel">
+    <div className={styles.filterActionPanel}>
       <PrimaryButton label="Submit" onClick={handleSubmit} roundBorder={true} />
       <SecondaryButton label="Reset" onClick={handleReset} roundBorder={true} />
     </div>
@@ -75,13 +75,13 @@ export const FilterForm = () => {
   ]
   return (
     <>
-      <Section title="Search Form" columns={fields} footer={footer} classname='search-form' />
+      <Section title="Search Form" columns={fields} footer={footer} classname={styles.searchForm} />
       {
         result.length
           ? <Section
               title="Search Results"
               columns={ [ <FilterResult data={result} /> ]}
-              classname='search-result' />
+              classname={styles.searchResult} />
           : null
       }
     </>

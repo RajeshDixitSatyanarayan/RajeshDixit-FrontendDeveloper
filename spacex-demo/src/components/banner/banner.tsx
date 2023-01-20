@@ -1,5 +1,5 @@
 import { Columns, IColumnsProps } from '../common/columns'
-import './banner.scss'
+import styles from './banner.module.scss'
 
 export interface IBannerProps extends IColumnsProps {
   classname?: string;
@@ -10,7 +10,7 @@ export const Banner = ({
   classname = ''
 }: IBannerProps) => {
   return (
-    <div className={`banner-container ${classname}`}>
+    <div className={`${styles.bannerContainer} ${classname}`}>
       <Columns columns={columns} />
     </div>
   )

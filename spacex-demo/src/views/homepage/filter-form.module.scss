@@ -1,0 +1,73 @@
+@import "../../variables.scss";
+@import "../../color.scss";
+.filterField {  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  select, input[type="date"] {
+    padding: $base_unit;
+    border-radius: $base_unit;
+    text-transform: capitalize;
+    border: 1px solid $border-gray;
+    margin-bottom: $base_unit;
+  }
+
+  select {
+    width: calc(25 * $base_unit);
+  }
+  input[type="date"] {
+    width: calc(23 * $base_unit);
+  }
+
+  span {
+    margin-right: $base_unit;
+    width: 20%;
+  }
+}
+
+.filterActionPanel {
+  padding: auto;
+  text-align: center;
+
+  button {
+    margin-right: calc(2 * $base_unit);
+  }
+}
+.searchResult {
+  div[class^="section_sectionBody"] {
+    height: calc(30 * $base_unit);
+    overflow-x: auto;
+
+    .col {
+      margin-top: 0;
+    }
+
+    table {
+      border-collapse:collapse;
+      width: 100%;
+  
+      .noDataFound {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin-top: calc(10 * $base_unit);
+        font-size: 1.4em;
+      }
+    }
+    tr {
+      height: 4 * $base_unit;
+      border-bottom: 1px solid $border-gray;
+    }
+    thead th {
+      background-color: $black;
+      color: $gray;
+      padding: $base_unit;
+    }
+    td {
+      text-align: left;
+      padding-left: $base_unit;
+    }
+  }
+}
